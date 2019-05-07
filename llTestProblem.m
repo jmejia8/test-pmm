@@ -29,9 +29,9 @@ function [functionValue equalityConstrVals inequalityConstrVals]=llTestProblem(l
     end    
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
-function [functionValue equalityConstrVals inequalityConstrVals] = pmm1(x, y)
-
-    functionValue = PMM_follower(x, y, 1);    
+function [functionValue equalityConstrVals inequalityConstrVals] = pmm(x, y)
+    global fnum_global;
+    functionValue = PMM_follower(x, y, fnum_global);    
 
     functionValue = -functionValue;
     
